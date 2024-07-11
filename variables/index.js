@@ -1,0 +1,11 @@
+"use strict";
+var userName = "Abdul Haseeb";
+console.log(userName);
+var num1 = 10;
+var num2 = 20;
+// var result:number = num1 + num2;
+// var result:number = num1 * num2;
+// var result:number = num1 / num2;
+// var result:number = num1 - num2;
+var result = num1 % num2;
+console.log(result);
