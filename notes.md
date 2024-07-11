@@ -158,3 +158,57 @@ if (num1 > num2) {
 }
 ``` 
 
+### 6. Functions and Arrow Functions
+
+TypeScript provides functions and arrow functions for defining reusable blocks of code. Functions can have parameters and return values. Arrow functions are a shorthand syntax for defining functions. Let's take a look at some examples of using functions and arrow functions in TypeScript.
+
+```typescript
+
+--Example code goes here--
+
+function add(num1: number, num2: number): number {
+    return num1 + num2;
+}
+
+var sum: number = add(10, 20); // 30
+
+var subtract = function (num1: number, num2: number): number {
+    return num1 - num2;
+}
+
+var difference: number = subtract(20, 10); // 10
+
+single line arrow function
+
+var multiply = (num1: number, num2: number): number => num1 * num2;
+
+```
+
+### 7. Var vs Let vs Const
+
+TypeScript provides var, let, and const keywords for declaring variables. The var keyword is function-scoped, the let keyword is block-scoped, and the const keyword is block-scoped and cannot be reassigned. Let's take a look at some examples of using var, let, and const in TypeScript.
+
+```typescript
+
+--Example code goes here--
+
+function varExample() {
+    if (true) {
+        var num: number = 10;
+    }
+    console.log(num); // 10
+}
+
+function letExample() {
+    if (true) {
+        let num: number = 10;
+    }
+    console.log(num); // Error: Cannot find name 'num'
+}
+
+function constExample() {
+    const num: number = 10;
+    num = 20; // Error: Cannot assign to 'num' because it is a constant
+}
+```
+
