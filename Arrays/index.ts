@@ -11,4 +11,34 @@ var newArr:number[] = new Array(10);
 newArr[0] = 10;
 newArr[1] = 20;
 newArr[2] = 30;
-console.log(newArr);
+// console.log(newArr);
+
+function pushNewItem(stdNames:string){
+    stdName[4] = stdNames;
+}
+
+pushNewItem("Asim");
+pushNewItem("Adeel");
+
+// console.log(stdName);
+
+// console.log(stdName.length);
+
+
+let CityName:string[] = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
+
+// function AddCityName (item:string){
+//     CityName[(CityName.length)] = item;
+// }
+
+// AddCityName("Hyderabad");
+// console.log(CityName);
+
+// CityName.push("Multan");
+// CityName.pop();
+// CityName.unshift("Multan");
+// CityName.shift();
+
+// console.log(CityName.slice(1, 3)); // Lahore, Islamabad
+console.log(CityName.splice(1,3, "Multan", "Faisalabad"));
+console.log(CityName);
