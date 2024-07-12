@@ -27,6 +27,35 @@ let CityName = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
 // CityName.pop();
 // CityName.unshift("Multan");
 // CityName.shift();
-// console.log(CityName.slice(1, 3));
-console.log(CityName.splice(1, 3, "Multan", "Faisalabad"));
-console.log(CityName);
+// console.log(CityName.slice(1, 3)); // Lahore, Islamabad
+// console.log(CityName.splice(1,3, "Multan", "Faisalabad"));
+// console.log(CityName);
+// for loop, while loop, do while loop
+for (let i = 0; i <= 5; i++) {
+    // console.log("Hello World", i);
+}
+var i = 0;
+while (i <= 5) {
+    // console.log("Hello World", i);
+    i++;
+}
+// console.log("Outer loop");
+// print the table of 2 using while loop
+var j = 1;
+while (j <= 10) {
+    // console.log("2 x ", j, " = ", 2 * j);
+    j++;
+}
+// do while loop
+var i = 0;
+do {
+    // console.log("Hello World", i);
+    i++;
+} while (i <= 5);
+if (true) {
+    var a = 1;
+    do {
+        console.log("Hello World", a * 5);
+        a++;
+    } while (a <= 5);
+}
