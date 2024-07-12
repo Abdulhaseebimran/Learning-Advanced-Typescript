@@ -212,3 +212,40 @@ function constExample() {
 }
 ```
 
+### 8. Arrays and Array Methods
+
+TypeScript provides arrays and array methods for working with collections of elements. Arrays can be created using square brackets [] or the Array constructor. Let's take a look at some examples of using arrays and array methods in TypeScript.
+
+```typescript
+
+--Example code goes here--
+
+var numbers: number[] = [1, 2, 3, 4, 5];
+var colors: Array<string> = ["Red", "Green", "Blue"];
+
+var firstNumber: number = numbers[0]; // 1
+var lastColor: string = colors[colors.length - 1]; // "Blue"
+
+numbers.push(6); // [1, 2, 3, 4, 5, 6]
+colors.pop(); // ["Red", "Green"]
+
+numbers.unshift(0); // [0, 1, 2, 3, 4, 5, 6]
+colors.shift(); // ["Green", "Blue"]
+
+var slicedNumbers: number[] = numbers.slice(1, 4); // [1, 2, 3] start index, end index (end index not included)
+var splicedNumbers: number[] = numbers.splice(1, 2); // [1, 2] start index, number of elements to remove
+
+var sortedNumbers: number[] = numbers.sort((a, b) => a - b); // [0, 3, 4, 5, 6]
+var reversedNumbers: number[] = numbers.reverse(); // [6, 5, 4, 3, 0]
+
+var filteredNumbers: number[] = numbers.filter(num => num > 3); // [4, 5, 6]
+var mappedNumbers: number[] = numbers.map(num => num * 2); // [12, 10, 8, 6, 0]
+
+var sumOfNumbers: number = numbers.reduce((acc, num) => acc + num, 0); // 18
+var maxNumber: number = numbers.reduce((max, num) => Math.max(max, num), numbers[0]); // 6
+
+var hasNumber: boolean = numbers.includes(3); // true
+var indexOfNumber: number = numbers.indexOf(3); // 3
+
+var joinedNumbers: string = numbers.join(", "); // "6, 5, 4, 3, 0"
+```
