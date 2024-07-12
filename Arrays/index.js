@@ -55,7 +55,14 @@ do {
 if (true) {
     var a = 1;
     do {
-        console.log("Hello World", a * 5);
+        //    console.log("Hello World", a * 5);
         a++;
     } while (a <= 5);
 }
+// prefix and postfix 
+let index = 1;
+let result = index++;
+let result2 = ++index;
+console.log("Index", index);
+console.log("Result", result);
+console.log("Result 2", result2);

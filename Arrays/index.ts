@@ -80,7 +80,22 @@ do {
 if (true) {
     var a:number = 1;
     do {
-       console.log("Hello World", a * 5);
+    //    console.log("Hello World", a * 5);
        a++;
     } while (a<=5);
 }
+
+
+// prefix and postfix 
+
+let index:number = 1;
+
+let result:number = index++;
+let result2:number = ++index;
+
+// console.log("Index", index);
+// console.log("Result", result);
+// console.log("Result 2:" , result2);
+
+
+
