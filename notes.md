@@ -249,3 +249,57 @@ var indexOfNumber: number = numbers.indexOf(3); // 3
 
 var joinedNumbers: string = numbers.join(", "); // "6, 5, 4, 3, 0"
 ```
+
+### 9. Loops and Iterators
+
+TypeScript provides for loops, while loops, do-while loops, and iterators for iterating over arrays and objects. Let's take a look at some examples of using loops and iterators in TypeScript.
+
+```typescript
+
+--Example code goes here--
+
+var numbers: number[] = [1, 2, 3, 4, 5];
+
+for (var i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+}
+
+var index: number = 0;
+while (index < numbers.length) {
+    console.log(numbers[index]);
+    index++;
+}
+
+var index: number = 0;
+
+do {
+    console.log(numbers[index]);
+    index++;
+} while (index < numbers.length);
+
+for (var num of numbers) {
+    console.log(num);
+}
+
+for (var index in numbers) {
+    console.log(numbers[index]);
+}
+```
+
+### 10. Prefix and Postfix Operators
+
+TypeScript provides prefix and postfix operators such as ++ and -- for incrementing and decrementing variables. Let's take a look at some examples of using prefix and postfix operators in TypeScript.
+
+```typescript
+
+--Example code goes here--
+
+var num: number = 10;
+
+var prefixIncrement: number = ++num; // 11
+var postfixIncrement: number = num++; // 11
+
+var prefixDecrement: number = --num; // 10
+var postfixDecrement: number = num--; // 10
+```
+
