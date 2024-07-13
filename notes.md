@@ -303,3 +303,125 @@ var prefixDecrement: number = --num; // 10
 var postfixDecrement: number = num--; // 10
 ```
 
+### 11. Objects and Object Methods
+
+TypeScript provides objects and object methods for working with key-value pairs. Objects can be created using curly braces {} or the Object constructor. Let's take a look at some examples of using objects and object methods in TypeScript.
+
+```typescript
+
+--Example code goes here--
+
+var person: { name: string, age: number } = { name: "John", age: 30 };
+
+var name: string = person.name; // "John"
+
+person.age = 40;
+
+var keys: string[] = Object.keys(person); // ["name", "age"]
+
+var values: any[] = Object.values(person); // ["John", 40]
+
+var entries: [string, any][] = Object.entries(person); // [["name", "John"], ["age", 40]]
+
+var hasName: boolean = person.hasOwnProperty("name"); // true
+
+var isEnumerable: boolean = person.propertyIsEnumerable("name"); // true
+
+var personCopy: { name: string, age: number } = { ...person }; // { name: "John", age: 40 }
+```
+
+### 12. Asynchronous and Synchronous Code 
+
+TypeScript provides asynchronous and synchronous code execution using callbacks, promises, async/await, and generators. Asynchronous code allows you to perform tasks concurrently without blocking the main thread. Let's take a look at some examples of using asynchronous and synchronous code in TypeScript.
+
+```typescript
+
+--Example code goes here--
+
+// Callbacks
+
+function fetchData(callback: (data: any) => void) {
+    setTimeout(() => {
+        callback({ name: "John", age: 30 });
+    }, 1000);
+}
+
+fetchData((data) => {
+    console.log(data);
+});
+
+// Promises
+
+function fetchData(): Promise<any> {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({ name: "John", age: 30 });
+        }, 1000);
+    });
+}
+
+fetchData().then((data) => {
+    console.log(data);
+});
+
+// Async/Await
+
+async function fetchData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({ name: "John", age: 30 });
+        }, 1000);
+    });
+}
+
+async function getData() {
+    const data = await fetchData();
+    console.log(data);
+}
+
+getData();
+
+// Generators
+
+function* generateNumbers() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
+
+const numbers = generateNumbers();
+
+console.log(numbers.next().value); // 1
+
+console.log(numbers.next().value); // 2
+
+console.log(numbers.next().value); // 3
+```
+
+### 13. Import and Export Modules
+
+TypeScript provides import and export statements for modularizing code into separate files. Modules allow you to organize code into reusable components and share code between files. Let's take a look at some examples of using import and export statements in TypeScript.
+
+```typescript
+
+--Example code goes here--
+
+// math.ts
+
+export function add(num1: number, num2: number): number {
+    return num1 + num2;
+}
+
+export function subtract(num1: number, num2: number): number {
+    return num1 - num2;
+}
+
+// app.ts
+
+import { add, subtract } from "./math";
+
+var sum: number = add(10, 20); // 30
+
+var difference: number = subtract(20, 10); // 10
+```
+
