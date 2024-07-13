@@ -97,5 +97,55 @@ let result2:number = ++index;
 // console.log("Result", result);
 // console.log("Result 2:" , result2);
 
+var sum:number = 1;
+let sumArray:number[] = [];
+let sumArray2:number[] = [];
+for(let i = 1; i <=200; i++){
+    if (i % 2 === 0) {
+        sum = sum + i;
+        sumArray.push(i);
+    }
+}
 
+// console.log("Sum of Even Numbers", sumArray);
+// console.log("Sum of Odd Numbers", sumArray2);
+
+// for each loop
+
+let cities:string[] = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
+
+// cities.forEach(function(city){
+//     console.log(city); // Karachi, Lahore, Islamabad, Quetta, Peshawar
+// })
+
+// another example of for each loop\
+
+let numbers:number[] = [1,2,3,4,5,6,7,8,9,10];
+
+let sum3:number = 0;
+
+// numbers.forEach(function(number){
+//     sum3 = sum3 + number;
+//     console.log(sum3);
+    
+// })
+
+
+// Map loop
+
+let cities2:string[] = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
+
+// cities2.map((cite) => {
+//     console.log("Hello World", cite);
+// })
+
+// filter loop
+
+let numbers2:number[] = [1,2,3,4,5,6,7,8,9,10];
+
+let evenNumbers:number[] = numbers2.filter((num) => {
+    return num % 2 === 0;
+})
+
+// console.log("Even Numbers", evenNumbers);
 
