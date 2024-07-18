@@ -212,3 +212,215 @@ function constExample() {
 }
 ```
 
+### 8. Arrays and Array Methods
+
+TypeScript provides arrays and array methods for working with collections of elements. Arrays can be created using square brackets [] or the Array constructor. Let's take a look at some examples of using arrays and array methods in TypeScript.
+
+```typescript
+
+--Example code goes here--
+
+var numbers: number[] = [1, 2, 3, 4, 5];
+var colors: Array<string> = ["Red", "Green", "Blue"];
+
+var firstNumber: number = numbers[0]; // 1
+var lastColor: string = colors[colors.length - 1]; // "Blue"
+
+numbers.push(6); // [1, 2, 3, 4, 5, 6]
+colors.pop(); // ["Red", "Green"]
+
+numbers.unshift(0); // [0, 1, 2, 3, 4, 5, 6]
+colors.shift(); // ["Green", "Blue"]
+
+var slicedNumbers: number[] = numbers.slice(1, 4); // [1, 2, 3] start index, end index (end index not included)
+var splicedNumbers: number[] = numbers.splice(1, 2); // [1, 2] start index, number of elements to remove
+
+var sortedNumbers: number[] = numbers.sort((a, b) => a - b); // [0, 3, 4, 5, 6]
+var reversedNumbers: number[] = numbers.reverse(); // [6, 5, 4, 3, 0]
+
+var filteredNumbers: number[] = numbers.filter(num => num > 3); // [4, 5, 6]
+var mappedNumbers: number[] = numbers.map(num => num * 2); // [12, 10, 8, 6, 0]
+
+var sumOfNumbers: number = numbers.reduce((acc, num) => acc + num, 0); // 18
+var maxNumber: number = numbers.reduce((max, num) => Math.max(max, num), numbers[0]); // 6
+
+var hasNumber: boolean = numbers.includes(3); // true
+var indexOfNumber: number = numbers.indexOf(3); // 3
+
+var joinedNumbers: string = numbers.join(", "); // "6, 5, 4, 3, 0"
+```
+
+### 9. Loops and Iterators
+
+TypeScript provides for loops, while loops, do-while loops, and iterators for iterating over arrays and objects. Let's take a look at some examples of using loops and iterators in TypeScript.
+
+```typescript
+
+--Example code goes here--
+
+var numbers: number[] = [1, 2, 3, 4, 5];
+
+for (var i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+}
+
+var index: number = 0;
+while (index < numbers.length) {
+    console.log(numbers[index]);
+    index++;
+}
+
+var index: number = 0;
+
+do {
+    console.log(numbers[index]);
+    index++;
+} while (index < numbers.length);
+
+for (var num of numbers) {
+    console.log(num);
+}
+
+for (var index in numbers) {
+    console.log(numbers[index]);
+}
+```
+
+### 10. Prefix and Postfix Operators
+
+TypeScript provides prefix and postfix operators such as ++ and -- for incrementing and decrementing variables. Let's take a look at some examples of using prefix and postfix operators in TypeScript.
+
+```typescript
+
+--Example code goes here--
+
+var num: number = 10;
+
+var prefixIncrement: number = ++num; // 11
+var postfixIncrement: number = num++; // 11
+
+var prefixDecrement: number = --num; // 10
+var postfixDecrement: number = num--; // 10
+```
+
+### 11. Objects and Object Methods
+
+TypeScript provides objects and object methods for working with key-value pairs. Objects can be created using curly braces {} or the Object constructor. Let's take a look at some examples of using objects and object methods in TypeScript.
+
+```typescript
+
+--Example code goes here--
+
+var person: { name: string, age: number } = { name: "John", age: 30 };
+
+var name: string = person.name; // "John"
+
+person.age = 40;
+
+var keys: string[] = Object.keys(person); // ["name", "age"]
+
+var values: any[] = Object.values(person); // ["John", 40]
+
+var entries: [string, any][] = Object.entries(person); // [["name", "John"], ["age", 40]]
+
+var hasName: boolean = person.hasOwnProperty("name"); // true
+
+var isEnumerable: boolean = person.propertyIsEnumerable("name"); // true
+
+var personCopy: { name: string, age: number } = { ...person }; // { name: "John", age: 40 }
+```
+
+### 12. Asynchronous and Synchronous Code 
+
+TypeScript provides asynchronous and synchronous code execution using callbacks, promises, async/await, and generators. Asynchronous code allows you to perform tasks concurrently without blocking the main thread. Let's take a look at some examples of using asynchronous and synchronous code in TypeScript.
+
+```typescript
+
+--Example code goes here--
+
+// Callbacks
+
+function fetchData(callback: (data: any) => void) {
+    setTimeout(() => {
+        callback({ name: "John", age: 30 });
+    }, 1000);
+}
+
+fetchData((data) => {
+    console.log(data);
+});
+
+// Promises
+
+function fetchData(): Promise<any> {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({ name: "John", age: 30 });
+        }, 1000);
+    });
+}
+
+fetchData().then((data) => {
+    console.log(data);
+});
+
+// Async/Await
+
+async function fetchData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({ name: "John", age: 30 });
+        }, 1000);
+    });
+}
+
+async function getData() {
+    const data = await fetchData();
+    console.log(data);
+}
+
+getData();
+
+// Generators
+
+function* generateNumbers() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
+
+const numbers = generateNumbers();
+
+console.log(numbers.next().value); // 1
+
+console.log(numbers.next().value); // 2
+
+console.log(numbers.next().value); // 3
+```
+
+### 13. Import and Export Modules
+
+TypeScript provides import and export statements for modularizing code into separate files. Modules allow you to organize code into reusable components and share code between files. Let's take a look at some examples of using import and export statements in TypeScript.
+
+```typescript
+
+--Example code goes here--
+
+// math.ts
+
+export function add(num1: number, num2: number): number {
+    return num1 + num2;
+}
+
+export function subtract(num1: number, num2: number): number {
+    return num1 - num2;
+}
+
+// app.ts
+
+import { add, subtract } from "./math";
+
+var sum: number = add(10, 20); // 30
+
+var difference: number = subtract(20, 10); // 10
+```
