@@ -14,13 +14,13 @@ fetchUserData().then(data => {
 
 console.log("After calling fetchUserData");
 
-async function userData(users:string) {
-    await fetchUserData();
-    console.log("Fetching user data", users);
-}
+// async function userData(users: string) {
+//     await fetchUserData();
+//     console.log("Fetching user data", users);
+// }
 
-userData("John");
-console.log("After calling userData");
+// userData("John");
+// console.log("After calling userData");
 
 
 // try {
@@ -28,3 +28,10 @@ console.log("After calling userData");
 // } catch (error) {
     
 // }
+
+try {
+    throw new Error("This is an error");
+} catch (error) {
+    console.log("error: ",error);
+    
+}
